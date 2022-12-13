@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=euc-kr" />
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  
+ 
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  
+  <style>
+    .container-disable { 
+      /* 클릭 불가능 none */
+      pointer-events : none;
+      style="overflow:scroll; height:800px;">
+    }
+    
+    /* 클릭 불가 영역 */
+    .container-able {
+      /* 클릭 가능 auto (기본설정)*/
+      pointer-events : auto;
+      
+    }
+    
+  </style> 
+  
+  
+</head>
+
+<body>
+  <script>
+    function searchDaum(){
+      inlineFrameExample.src = "https://m.dic.daum.net/search.do?q=" + s_word.value;
+    }
+    function searchNaver(){
+      inlineFrameExample.src = "https://en.dict.naver.com/#/search?query=" + s_word.value;
+    }     
+    function clear(){
+       s_word.value = "";
+    }
+    
+  </script>
+
+  
+  
+  <table>
+  <tr>
+   <div class="container-able">
+      <input type ="text" placeholder="WORD" id="s_word" ></input>
+      <input type ="button" value="daum" onclick="searchDaum();" </input>
+      <input type ="button" value="naver" onclick="searchNaver();" </input>
+      <input type ="button" value="지우기" onclick="clear1();" </input>
+   </div>
+  </tr>
+  <tr>
+   <div class="container-disable">
+      <iframe id="inlineFrameExample" onclick="none();"  title="Inline Frame Example" width="500" height="1000" 
+       src="https://m.dic.daum.net"/>
+
+    </div>
+  </tr>
+  </table>
+</body>
+
+
+
+</html>
